@@ -11,25 +11,31 @@ export * from './zbds';
 export * from './hotel_tvn';
 export * from './utils';
 
-import { filter } from '../utils';
 import {
   epg_pw_sources,
+  // iptv_org_sources,
+  // iptv_org_stream_sources,
+  // yang_m3u_sources,
+  // yuechan_live_sources,
+  // fanmingming_live_sources,
+  // qwerttvv_bj_iptv_sources,
+  // joevess_iptv_sources,
+  // cymz6_lives_sources,
   youhun_sources,
   zbds_sources,
   hotel_tvn_sources,
-  fanmingming_live_sources,
 } from '.';
 
 export const sources = [
-  // 1. 新增的高成功率专用源
-  {
-    name: '港澳台专用',
-    f_name: 'gangtai_v2',
-    url: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u',
-    filter: filter,
-  },
-  // 2. 保留你原本的其他源
+  // ...fanmingming_live_sources,
+  // ...yuechan_live_sources,
+  // ...cymz6_lives_sources,
+  // ...yang_m3u_sources,
+  // ...joevess_iptv_sources,
+  // ...iptv_org_sources,
+  // ...iptv_org_stream_sources,
   ...epg_pw_sources,
+  // ...qwerttvv_bj_iptv_sources,
   ...youhun_sources,
   ...zbds_sources,
   ...hotel_tvn_sources,
