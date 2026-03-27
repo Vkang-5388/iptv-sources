@@ -11,31 +11,23 @@ export * from './zbds';
 export * from './hotel_tvn';
 export * from './utils';
 
+import { filter } from '../utils';
 import {
   epg_pw_sources,
-  // iptv_org_sources,
-  // iptv_org_stream_sources,
-  // yang_m3u_sources,
-  // yuechan_live_sources,
-  // fanmingming_live_sources,
-  // qwerttvv_bj_iptv_sources,
-  // joevess_iptv_sources,
-  // cymz6_lives_sources,
   youhun_sources,
   zbds_sources,
   hotel_tvn_sources,
 } from '.';
 
 export const sources = [
-  // ...fanmingming_live_sources,
-  // ...yuechan_live_sources,
-  // ...cymz6_lives_sources,
-  // ...yang_m3u_sources,
-  // ...joevess_iptv_sources,
-  // ...iptv_org_sources,
-  // ...iptv_org_stream_sources,
+  // 这里换成了更适合国内网络、不用VPN的源
+  {
+    name: '港澳台免翻',
+    f_name: 'gangtai_no_vpn',
+    url: 'https://raw.githubusercontent.com/Guover/iptv/master/gangtai.m3u',
+    filter: filter,
+  },
   ...epg_pw_sources,
-  // ...qwerttvv_bj_iptv_sources,
   ...youhun_sources,
   ...zbds_sources,
   ...hotel_tvn_sources,
