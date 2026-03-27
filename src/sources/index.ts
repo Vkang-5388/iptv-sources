@@ -17,7 +17,7 @@ import {
   // iptv_org_stream_sources,
   // yang_m3u_sources,
   // yuechan_live_sources,
-  // fanmingming_live_sources,
+  fanmingming_live_sources, // <-- 这里取消了注释
   // qwerttvv_bj_iptv_sources,
   // joevess_iptv_sources,
   // cymz6_lives_sources,
@@ -27,7 +27,7 @@ import {
 } from '.';
 
 export const sources = [
-  // ...fanmingming_live_sources,
+  ...fanmingming_live_sources, // <-- 这里取消了注释
   // ...yuechan_live_sources,
   // ...cymz6_lives_sources,
   // ...yang_m3u_sources,
