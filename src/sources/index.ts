@@ -16,12 +16,13 @@ import {
   youhun_sources,
   zbds_sources,
   hotel_tvn_sources,
-  // 必须保留从 '.' 导入 filter，否则 build 会报错
-  filter, 
 } from '.';
 
+// 这里的路径改回你原版的 ../utils，确保能找到 filter 零件
+import { filter } from '../utils';
+
 export const sources = [
-  // 仅在这里插入我们需要的港澳台源
+  // 仅插入这一段
   {
     name: '港澳台免翻',
     f_name: 'gangtai_no_vpn',
