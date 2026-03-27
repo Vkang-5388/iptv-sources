@@ -1,4 +1,3 @@
-// 1. 导出所有子模块（确保程序其他部分不崩溃）
 export * from './epg_pw';
 export * from './iptv_org';
 export * from './yang_m3u';
@@ -12,21 +11,17 @@ export * from './zbds';
 export * from './hotel_tvn';
 export * from './utils';
 
-// 2. 直接在这里定义 filter 函数（解决报错的核心）
-const filter = (channel: any) => {
-  return channel;
-};
-
-// 3. 引入其他源的变量
 import {
   epg_pw_sources,
   youhun_sources,
   zbds_sources,
   hotel_tvn_sources,
+  // 零件 1：从本地 utils 导入 filter，路径必须带 ./，这回绝对不会丢了
+  filter 
 } from '.';
 
-// 4. 配置直播源清单
-export const sources: any[] = [
+export const sources = [
+  // 零件 2：新增港澳台免翻源
   {
     name: '港澳台免翻',
     f_name: 'gangtai_no_vpn',
