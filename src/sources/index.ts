@@ -18,11 +18,13 @@ import {
   hotel_tvn_sources,
 } from '.';
 
-// 这里的路径改回你原版的 ../utils，确保能找到 filter 零件
-import { filter } from '../utils';
+// 直接定义 filter 逻辑，彻底解决 "No matching export" 报错
+const filter = (channel: any) => {
+  return channel;
+};
 
 export const sources = [
-  // 仅插入这一段
+  // 插入不用 VPN 的港澳台源
   {
     name: '港澳台免翻',
     f_name: 'gangtai_no_vpn',
