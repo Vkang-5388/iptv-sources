@@ -13,25 +13,29 @@ export * from './utils';
 
 import {
   epg_pw_sources,
+  // iptv_org_sources,
+  // iptv_org_stream_sources,
+  // yang_m3u_sources,
+  // yuechan_live_sources,
+  // fanmingming_live_sources,
+  // qwerttvv_bj_iptv_sources,
+  // joevess_iptv_sources,
+  // cymz6_lives_sources,
   youhun_sources,
   zbds_sources,
   hotel_tvn_sources,
 } from '.';
 
-// 直接定义 filter 逻辑，彻底解决 "No matching export" 报错
-const filter = (channel: any) => {
-  return channel;
-};
-
 export const sources = [
-  // 插入不用 VPN 的港澳台源
-  {
-    name: '港澳台免翻',
-    f_name: 'gangtai_no_vpn',
-    url: 'https://raw.githubusercontent.com/Guover/iptv/master/gangtai.m3u',
-    filter: filter,
-  },
+  // ...fanmingming_live_sources,
+  // ...yuechan_live_sources,
+  // ...cymz6_lives_sources,
+  // ...yang_m3u_sources,
+  // ...joevess_iptv_sources,
+  // ...iptv_org_sources,
+  // ...iptv_org_stream_sources,
   ...epg_pw_sources,
+  // ...qwerttvv_bj_iptv_sources,
   ...youhun_sources,
   ...zbds_sources,
   ...hotel_tvn_sources,
